@@ -1,0 +1,175 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/substack/testling"
+
+    >testling (v1.7.1)</a>
+</h1>
+<h4>write tests for browser code</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testling">module testling</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testling.unglob">
+            function <span class="apidocSignatureSpan">testling.</span>unglob
+            <span class="apidocSignatureSpan">(dir, params, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testling.unglob">module testling.unglob</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testling.unglob.unglob">
+            function <span class="apidocSignatureSpan">testling.</span>unglob
+            <span class="apidocSignatureSpan">(dir, params, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testling" id="apidoc.module.testling">module testling</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testling.unglob" id="apidoc.element.testling.unglob">
+        function <span class="apidocSignatureSpan">testling.</span>unglob
+        <span class="apidocSignatureSpan">(dir, params, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unglob = function (dir, params, cb) {
+    var gfiles = withType(&#x27;file&#x27;, params.files);
+    var gscripts = withType(&#x27;script&#x27;, params.scripts);
+    var gpostSripts = withType(&#x27;postScript&#x27;, params.postScripts);
+
+    var gs = gfiles.concat(gscripts);
+    var expanded = { file: [], script: [], postScript: [] };
+
+    (function next () {
+        if (gs.length === 0) {
+            return cb(null, expanded)
+        }
+
+        var opts = { root: dir, cwd: dir };
+        var g = gs.shift();
+        glob(g.file, opts, function (err, files) {
+            if (err) return cb(err);
+
+            expanded[g.type].push.apply(expanded[g.type], files);;
+            next();
+        });
+    })();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testling.unglob" id="apidoc.module.testling.unglob">module testling.unglob</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testling.unglob.unglob" id="apidoc.element.testling.unglob.unglob">
+        function <span class="apidocSignatureSpan">testling.</span>unglob
+        <span class="apidocSignatureSpan">(dir, params, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unglob = function (dir, params, cb) {
+    var gfiles = withType(&#x27;file&#x27;, params.files);
+    var gscripts = withType(&#x27;script&#x27;, params.scripts);
+    var gpostSripts = withType(&#x27;postScript&#x27;, params.postScripts);
+
+    var gs = gfiles.concat(gscripts);
+    var expanded = { file: [], script: [], postScript: [] };
+
+    (function next () {
+        if (gs.length === 0) {
+            return cb(null, expanded)
+        }
+
+        var opts = { root: dir, cwd: dir };
+        var g = gs.shift();
+        glob(g.file, opts, function (err, files) {
+            if (err) return cb(err);
+
+            expanded[g.type].push.apply(expanded[g.type], files);;
+            next();
+        });
+    })();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
