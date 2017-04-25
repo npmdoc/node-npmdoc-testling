@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "api documentation for [testling (v1.7.1)](https://github.com/substack/testling) [![npm package](https://img.shields.io/npm/v/npmdoc-testling.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-testling) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-testling.svg)](https://travis-ci.org/npmdoc/node-npmdoc-testling)",
+    "description": "#### basic api documentation for  [testling (v1.7.1)](https://github.com/substack/testling)  [![npm package](https://img.shields.io/npm/v/npmdoc-testling.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-testling) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-testling.svg)](https://travis-ci.org/npmdoc/node-npmdoc-testling)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "testling": "*",

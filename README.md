@@ -1,4 +1,7 @@
-# api documentation for  [testling (v1.7.1)](https://github.com/substack/testling)  [![npm package](https://img.shields.io/npm/v/npmdoc-testling.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-testling) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-testling.svg)](https://travis-ci.org/npmdoc/node-npmdoc-testling)
+# npmdoc-testling
+
+#### basic api documentation for  [testling (v1.7.1)](https://github.com/substack/testling)  [![npm package](https://img.shields.io/npm/v/npmdoc-testling.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-testling) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-testling.svg)](https://travis-ci.org/npmdoc/node-npmdoc-testling)
+
 #### write tests for browser code
 
 [![NPM](https://nodei.co/npm/testling.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/testling)
