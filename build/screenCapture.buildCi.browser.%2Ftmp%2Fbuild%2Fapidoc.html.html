@@ -54,109 +54,12 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.testling">module testling</a><ol>
 
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.testling.unglob">
-            function <span class="apidocSignatureSpan">testling.</span>unglob
-            <span class="apidocSignatureSpan">(dir, params, cb)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.testling.unglob">module testling.unglob</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.testling.unglob.unglob">
-            function <span class="apidocSignatureSpan">testling.</span>unglob
-            <span class="apidocSignatureSpan">(dir, params, cb)</span>
-            </a>
-
-        </li>
-
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.testling" id="apidoc.module.testling">module testling</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.testling.unglob" id="apidoc.element.testling.unglob">
-        function <span class="apidocSignatureSpan">testling.</span>unglob
-        <span class="apidocSignatureSpan">(dir, params, cb)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">unglob = function (dir, params, cb) {
-    var gfiles = withType('file', params.files);
-    var gscripts = withType('script', params.scripts);
-    var gpostSripts = withType('postScript', params.postScripts);
-
-    var gs = gfiles.concat(gscripts);
-    var expanded = { file: [], script: [], postScript: [] };
-
-    (function next () {
-        if (gs.length === 0) {
-            return cb(null, expanded)
-        }
-
-        var opts = { root: dir, cwd: dir };
-        var g = gs.shift();
-        glob(g.file, opts, function (err, files) {
-            if (err) return cb(err);
-
-            expanded[g.type].push.apply(expanded[g.type], files);;
-            next();
-        });
-    })();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.testling.unglob" id="apidoc.module.testling.unglob">module testling.unglob</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.testling.unglob.unglob" id="apidoc.element.testling.unglob.unglob">
-        function <span class="apidocSignatureSpan">testling.</span>unglob
-        <span class="apidocSignatureSpan">(dir, params, cb)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">unglob = function (dir, params, cb) {
-    var gfiles = withType('file', params.files);
-    var gscripts = withType('script', params.scripts);
-    var gpostSripts = withType('postScript', params.postScripts);
-
-    var gs = gfiles.concat(gscripts);
-    var expanded = { file: [], script: [], postScript: [] };
-
-    (function next () {
-        if (gs.length === 0) {
-            return cb(null, expanded)
-        }
-
-        var opts = { root: dir, cwd: dir };
-        var g = gs.shift();
-        glob(g.file, opts, function (err, files) {
-            if (err) return cb(err);
-
-            expanded[g.type].push.apply(expanded[g.type], files);;
-            next();
-        });
-    })();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
 
 </div>
 
